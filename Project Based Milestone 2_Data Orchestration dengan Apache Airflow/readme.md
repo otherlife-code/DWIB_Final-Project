@@ -1,14 +1,15 @@
-# 📊 Data Orchestration dengan Apache Airflow
+# 🌀 ETL dan Pemeriksaan Kualitas Data dengan Apache Airflow
 
-## 🎯 Tujuan
-Mengubah implementasi Data Warehouse DuckDB dan pipeline ETL dari tugas sebelumnya menjadi alur kerja yang siap produksi dan terorkestrasi menggunakan **Apache Airflow**. Tugas ini mempersiapkan pipeline data Anda untuk keperluan **visualisasi** dan **penggunaan operasional** lainnya.
+## 🎯 Tujuan  
+Mengubah pipeline ETL berbasis DuckDB menjadi alur kerja terorkestrasi menggunakan **Apache Airflow**, serta menambahkan proses validasi kualitas data yang terotomasi. Proyek ini mempersiapkan data agar siap digunakan untuk **analisis**, **visualisasi**, dan **pemantauan kualitas data** harian.
 
 ---
 
 ## 🧱 Bagian 1: Menyiapkan Lingkungan Airflow
 
-- Siapkan lingkungan Airflow lokal (menggunakan **Docker** atau instalasi langsung)
-- Konfigurasikan koneksi yang diperlukan untuk **sumber data** dan **DuckDB**
+- Lingkungan dijalankan secara lokal menggunakan **Docker Compose**
+- Koneksi ke sumber data berupa file CSV dari Google Drive
+- **DuckDB** digunakan sebagai sistem data warehouse lokal
 
 ---
 
@@ -16,29 +17,23 @@ Mengubah implementasi Data Warehouse DuckDB dan pipeline ETL dari tugas sebelumn
 
 ### 2.1 DAG Pipeline ETL
 
-Konversi pipeline ETL sebelumnya menjadi DAG di Airflow:
-
-- Implementasikan dependensi tugas menggunakan:
-  - Operator tradisional (`>>` dan `<<`), atau
-  - TaskFlow API dengan `@task` decorators (opsional)
-- Komponen DAG:
-  - 🔄 **Ekstraksi** dari setiap sumber data
-  - 🧪 **Transformasi** sesuai definisi ETL
-  - 📥 **Loading** ke dalam data warehouse DuckDB
-  - 👀 Setidaknya satu **Sensor** untuk cek ketersediaan data
+- Konversi pipeline Python ke dalam DAG menggunakan **TaskFlow API**
+- Komponen utama DAG:
+  - 🔄 **Ekstraksi** dari link Google Drive
+  - 🧪 **Transformasi** menjadi tabel fakta dan dimensi
+  - 📥 **Loading** ke DuckDB
+  - 👀 Sensor memeriksa ketersediaan file
 
 ### 2.2 Fitur Airflow Lanjutan
 
-Kami Implementasikan setidaknya **dua** fitur lanjutan berikut:
+- ❌ **Error Handling** dan **Retry** otomatis
+- 📧 Notifikasi email untuk task gagal dan task sukses
 
-- ❌ Error handling dan mekanisme retry
-- 📣 Notifikasi (Email/Slack) untuk status berhasil/gagal
+### 2.3 Strategi Penjadwalan
 
-
-### 2.3 Strategi Penjadwalan dan Partisi
-
-- Rancang strategi **penjadwalan** DAG yang sesuai
-- Dokumentasikan keputusan penjadwalan dan **alasannya**
+- Jadwal eksekusi menggunakan `@daily`
+- `catchup=False` digunakan agar DAG tidak menumpuk backlog
+- Dokumentasi penjadwalan disediakan dalam dokumen terpisah
 
 ---
 
@@ -46,61 +41,64 @@ Kami Implementasikan setidaknya **dua** fitur lanjutan berikut:
 
 ### 3.1 Pengujian DAG
 
-- Uji DAG menggunakan fitur testing Airflow
-- Sertakan log eksekusi yang berhasil
+- Eksekusi DAG dilakukan secara manual melalui UI Airflow
+- Semua log task terekam dan diverifikasi
 
 ### 3.2 Dokumentasi
 
-Dokumentasi wajib meliputi:
+Disediakan dokumentasi berikut:
 
-- 🗺 Diagram arsitektur DAG & dependensi
-- 📌 Deskripsi tujuan setiap task
-- 🕒 Informasi penjadwalan & dependensi
-- 👁️‍🗨️ Pengaturan pemantauan & peringatan
-- 🔁 Prosedur pemulihan kegagalan
+- 🗺 Diagram dependensi tugas DAG
+- 📌 Tujuan dan deskripsi masing-masing task
+- 🕒 Penjadwalan dan pemicu DAG
+- 👁️‍🗨️ Pengaturan pemantauan dan email alert
+- 🔁 Prosedur penanganan task failure
 
 ---
 
 ## 📐 Bagian 4: Kualitas Data
 
-- Implementasikan minimal **dua pemeriksaan kualitas data** menggunakan:
-  - Airflow
- 
-- Buat DAG **terpisah** untuk memantau kualitas data
-- Dokumentasikan:
-  - Metrik kualitas data
-  - Ambang batas (threshold)
+- DAG `dag_data_quality` dibuat secara terpisah
+- Pemeriksaan kualitas mencakup:
+  - ✅ Unik-nya `customer_key` di `dim_customer`
+  - ✅ Null ratio di kolom `fact_transactions` tidak melebihi 10%
+- Hasil validasi dicatat dalam `log_data_quality.csv`
+- Notifikasi email dikirim berdasarkan hasil pemeriksaan
 
 ---
 
 ## 📦 Deliverable
 
 ### 🗂 Repositori Kode
-- File definisi DAG Airflow
-- Script Python untuk ETL, sensor, dan validasi
+
+- `dags/etl_duckdb_dag.py`
+- `dags/etl_pipeline.py`
+- `dags/dag_data_quality.py`
 
 ### 📚 Dokumentasi
-- Diagram arsitektur DAG
+
 - Dokumen strategi penjadwalan
 - Dokumen metrik kualitas data
 
 ### 🧾 Bukti Eksekusi
-- 📸 Tangkapan layar DAG yang sukses dijalankan
-- 📄 Log eksekusi yang valid
-- 📸 Tampilan UI Airflow yang menampilkan DAG
+
+- 📸 Tangkapan layar DAG sukses
+- 📄 Log keberhasilan dan kegagalan
+- 📸 Screenshot UI Airflow
 
 ---
 
-## 📊 Rencana Persiapan Visualisasi
+## 📊 Kesiapan Visualisasi Data
 
-- Ringkasan kesiapan data untuk divisualisasikan
-- Rekomendasi alat visualisasi:
-  - Contoh: **Metabase**, **Apache Superset**, atau **Power BI**
-- Contoh kueri yang berguna untuk visualisasi:
-  ```sql
-  SELECT customer_id, SUM(order_total) as total_spent
-  FROM orders
-  GROUP BY customer_id
-  ORDER BY total_spent DESC
-  LIMIT 10;
+Data telah ditransformasikan menjadi tabel-tabel dimensi dan fakta:
 
+- Tabel dimensi: `dim_customer`, `dim_card`, `dim_time`, `dim_demographics`
+- Tabel fakta: `fact_transactions`
+
+Tabel siap digunakan untuk visualisasi seperti:
+
+```sql
+SELECT c.Attrition_Flag, AVG(f.Total_Trans_Amt) AS avg_amount
+FROM fact_transactions f
+JOIN dim_customer c ON f.customer_key = c.customer_key
+GROUP BY c.Attrition_Flag;
