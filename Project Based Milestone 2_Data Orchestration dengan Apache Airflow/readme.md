@@ -65,8 +65,7 @@ Dokumentasi wajib meliputi:
 
 - Implementasikan minimal **dua pemeriksaan kualitas data** menggunakan:
   - Airflow
-  - Great Expectations
-  - Python Native
+ 
 - Buat DAG **terpisah** untuk memantau kualitas data
 - Dokumentasikan:
   - Metrik kualitas data
