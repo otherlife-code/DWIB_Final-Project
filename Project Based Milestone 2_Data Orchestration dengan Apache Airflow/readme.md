@@ -29,15 +29,11 @@ Konversi pipeline ETL sebelumnya menjadi DAG di Airflow:
 
 ### 2.2 Fitur Airflow Lanjutan
 
-Implementasikan setidaknya **dua** fitur lanjutan berikut:
+Kami Implementasikan setidaknya **dua** fitur lanjutan berikut:
 
-- 🔀 Branching logic berdasarkan kondisi
-- ♻️ Dynamic task generation
-- 🧩 Custom operators untuk logika bisnis tertentu
 - ❌ Error handling dan mekanisme retry
 - 📣 Notifikasi (Email/Slack) untuk status berhasil/gagal
-- ⏱ SLA dan pemantauan
-- ⏪ Backfilling capabilities
+
 
 ### 2.3 Strategi Penjadwalan dan Partisi
 
