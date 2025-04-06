@@ -1,0 +1,2 @@
+run_date,status,total_rows,max_null_ratio,duplicate_customer_key,notes
+2025-04-06 14:56:26.317603,success,2000,0.0,0,"✅ Null ratio semua kolom OK: max 0.00% | ✅ customer_key OK, tidak ada duplikat"
