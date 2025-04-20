@@ -1,0 +1,34 @@
+[2025-04-20T02:46:15.767+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-20T02:46:15.794+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: migrate_duckdb_to_sqlite.migrate_all_tables manual__2025-04-20T02:46:12.053687+00:00 [queued]>
+[2025-04-20T02:46:15.808+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: migrate_duckdb_to_sqlite.migrate_all_tables manual__2025-04-20T02:46:12.053687+00:00 [queued]>
+[2025-04-20T02:46:15.809+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-04-20T02:46:15.830+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): migrate_all_tables> on 2025-04-20 02:46:12.053687+00:00
+[2025-04-20T02:46:15.849+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=636) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-04-20T02:46:15.852+0000] {standard_task_runner.py:72} INFO - Started process 638 to run task
+[2025-04-20T02:46:15.852+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'migrate_duckdb_to_sqlite', 'migrate_all_tables', 'manual__2025-04-20T02:46:12.053687+00:00', '--job-id', '234', '--raw', '--subdir', 'DAGS_FOLDER/dag_migration_sqlite.py', '--cfg-path', '/tmp/tmpliz9jba8']
+[2025-04-20T02:46:15.853+0000] {standard_task_runner.py:105} INFO - Job 234: Subtask migrate_all_tables
+[2025-04-20T02:46:15.936+0000] {task_command.py:467} INFO - Running <TaskInstance: migrate_duckdb_to_sqlite.migrate_all_tables manual__2025-04-20T02:46:12.053687+00:00 [running]> on host 967b14145433
+[2025-04-20T02:46:16.072+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='migrate_duckdb_to_sqlite' AIRFLOW_CTX_TASK_ID='migrate_all_tables' AIRFLOW_CTX_EXECUTION_DATE='2025-04-20T02:46:12.053687+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-20T02:46:12.053687+00:00'
+[2025-04-20T02:46:16.074+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-04-20T02:46:16.075+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-04-20T02:46:16.075+0000] {logging_mixin.py:190} INFO - Current task name:migrate_all_tables state:running start_date:2025-04-20 02:46:15.795653+00:00
+[2025-04-20T02:46:16.076+0000] {logging_mixin.py:190} INFO - Dag name:migrate_duckdb_to_sqlite and current dag run status:running
+[2025-04-20T02:46:16.076+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-20T02:46:16.167+0000] {logging_mixin.py:190} INFO - Memigrasikan tabel: dim_card
+[2025-04-20T02:46:16.243+0000] {logging_mixin.py:190} INFO - Memigrasikan tabel: dim_customer
+[2025-04-20T02:46:16.302+0000] {logging_mixin.py:190} INFO - Memigrasikan tabel: dim_demographics
+[2025-04-20T02:46:16.346+0000] {logging_mixin.py:190} INFO - Memigrasikan tabel: dim_time
+[2025-04-20T02:46:16.380+0000] {logging_mixin.py:190} INFO - Memigrasikan tabel: fact_transactions
+[2025-04-20T02:46:16.512+0000] {logging_mixin.py:190} INFO - ✅ Migrasi selesai!
+[2025-04-20T02:46:16.514+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-20T02:46:16.529+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-20T02:46:16.529+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=migrate_duckdb_to_sqlite, task_id=migrate_all_tables, run_id=manual__2025-04-20T02:46:12.053687+00:00, execution_date=20250420T024612, start_date=20250420T024615, end_date=20250420T024616
+[2025-04-20T02:46:16.567+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-04-20T02:46:16.568+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-04-20T02:46:16.569+0000] {logging_mixin.py:190} INFO - Dag name:migrate_duckdb_to_sqlite queued_at:2025-04-20 02:46:12.109200+00:00
+[2025-04-20T02:46:16.570+0000] {logging_mixin.py:190} INFO - Task hostname:967b14145433 operator:PythonOperator
+[2025-04-20T02:46:16.593+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-20T02:46:16.621+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-20T02:46:16.624+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

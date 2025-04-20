@@ -1,0 +1,84 @@
+[2025-03-22T09:22:47.908+0000] {processor.py:186} INFO - Started process (PID=3188) to work on /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:22:47.909+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag_imut.py for tasks to queue
+[2025-03-22T09:22:47.912+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:22:47.911+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:22:47.953+0000] {processor.py:925} INFO - DAG(s) 'contoh_dag_pertamaku' retrieved from /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:22:48.065+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:22:48.064+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-22T09:22:48.088+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:22:48.088+0000] {dag.py:4180} INFO - Setting next_dagrun for contoh_dag_pertamaku to 2025-03-21 00:00:00+00:00, run_after=2025-03-22 00:00:00+00:00
+[2025-03-22T09:22:48.109+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag_imut.py took 0.210 seconds
+[2025-03-22T09:23:18.216+0000] {processor.py:186} INFO - Started process (PID=3253) to work on /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:23:18.218+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag_imut.py for tasks to queue
+[2025-03-22T09:23:18.219+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:23:18.219+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:23:18.238+0000] {processor.py:925} INFO - DAG(s) 'contoh_dag_pertamaku' retrieved from /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:23:18.256+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:23:18.256+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-22T09:23:18.281+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:23:18.281+0000] {dag.py:4180} INFO - Setting next_dagrun for contoh_dag_pertamaku to 2025-03-21 00:00:00+00:00, run_after=2025-03-22 00:00:00+00:00
+[2025-03-22T09:23:18.301+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag_imut.py took 0.091 seconds
+[2025-03-22T09:23:48.431+0000] {processor.py:186} INFO - Started process (PID=3316) to work on /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:23:48.432+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag_imut.py for tasks to queue
+[2025-03-22T09:23:48.433+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:23:48.433+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:23:48.450+0000] {processor.py:925} INFO - DAG(s) 'contoh_dag_pertamaku' retrieved from /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:23:48.468+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:23:48.468+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-22T09:23:48.491+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:23:48.491+0000] {dag.py:4180} INFO - Setting next_dagrun for contoh_dag_pertamaku to 2025-03-21 00:00:00+00:00, run_after=2025-03-22 00:00:00+00:00
+[2025-03-22T09:23:48.510+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag_imut.py took 0.086 seconds
+[2025-03-22T09:24:18.804+0000] {processor.py:186} INFO - Started process (PID=3380) to work on /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:24:18.804+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag_imut.py for tasks to queue
+[2025-03-22T09:24:18.805+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:24:18.805+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:24:18.821+0000] {processor.py:925} INFO - DAG(s) 'contoh_dag_pertamaku' retrieved from /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:24:18.837+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:24:18.837+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-22T09:24:18.862+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:24:18.862+0000] {dag.py:4180} INFO - Setting next_dagrun for contoh_dag_pertamaku to 2025-03-21 00:00:00+00:00, run_after=2025-03-22 00:00:00+00:00
+[2025-03-22T09:24:18.881+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag_imut.py took 0.082 seconds
+[2025-03-22T09:24:49.553+0000] {processor.py:186} INFO - Started process (PID=3444) to work on /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:24:49.554+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag_imut.py for tasks to queue
+[2025-03-22T09:24:49.555+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:24:49.555+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:24:49.571+0000] {processor.py:925} INFO - DAG(s) 'contoh_dag_pertamaku' retrieved from /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:24:49.590+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:24:49.590+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-22T09:24:49.612+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:24:49.612+0000] {dag.py:4180} INFO - Setting next_dagrun for contoh_dag_pertamaku to 2025-03-21 00:00:00+00:00, run_after=2025-03-22 00:00:00+00:00
+[2025-03-22T09:24:49.629+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag_imut.py took 0.083 seconds
+[2025-03-22T09:25:19.799+0000] {processor.py:186} INFO - Started process (PID=3508) to work on /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:25:19.800+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag_imut.py for tasks to queue
+[2025-03-22T09:25:19.801+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:25:19.801+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:25:19.818+0000] {processor.py:925} INFO - DAG(s) 'contoh_dag_pertamaku' retrieved from /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:25:19.836+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:25:19.836+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-22T09:25:19.862+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:25:19.862+0000] {dag.py:4180} INFO - Setting next_dagrun for contoh_dag_pertamaku to 2025-03-21 00:00:00+00:00, run_after=2025-03-22 00:00:00+00:00
+[2025-03-22T09:25:19.882+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag_imut.py took 0.089 seconds
+[2025-03-22T09:25:50.086+0000] {processor.py:186} INFO - Started process (PID=3572) to work on /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:25:50.087+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag_imut.py for tasks to queue
+[2025-03-22T09:25:50.088+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:25:50.088+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:25:50.108+0000] {processor.py:925} INFO - DAG(s) 'contoh_dag_pertamaku' retrieved from /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:25:50.129+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:25:50.129+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-22T09:25:50.154+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:25:50.154+0000] {dag.py:4180} INFO - Setting next_dagrun for contoh_dag_pertamaku to 2025-03-21 00:00:00+00:00, run_after=2025-03-22 00:00:00+00:00
+[2025-03-22T09:25:50.174+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag_imut.py took 0.095 seconds
+[2025-03-22T09:26:20.564+0000] {processor.py:186} INFO - Started process (PID=3636) to work on /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:26:20.565+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag_imut.py for tasks to queue
+[2025-03-22T09:26:20.566+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:26:20.566+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:26:20.584+0000] {processor.py:925} INFO - DAG(s) 'contoh_dag_pertamaku' retrieved from /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:26:20.603+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:26:20.603+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-22T09:26:20.636+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:26:20.635+0000] {dag.py:4180} INFO - Setting next_dagrun for contoh_dag_pertamaku to 2025-03-21 00:00:00+00:00, run_after=2025-03-22 00:00:00+00:00
+[2025-03-22T09:26:20.660+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag_imut.py took 0.103 seconds
+[2025-03-22T09:26:50.821+0000] {processor.py:186} INFO - Started process (PID=3700) to work on /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:26:50.823+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag_imut.py for tasks to queue
+[2025-03-22T09:26:50.824+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:26:50.824+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:26:50.847+0000] {processor.py:925} INFO - DAG(s) 'contoh_dag_pertamaku' retrieved from /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:26:50.877+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:26:50.876+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-22T09:26:50.914+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:26:50.914+0000] {dag.py:4180} INFO - Setting next_dagrun for contoh_dag_pertamaku to 2025-03-21 00:00:00+00:00, run_after=2025-03-22 00:00:00+00:00
+[2025-03-22T09:26:50.945+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag_imut.py took 0.131 seconds
+[2025-03-22T09:27:21.605+0000] {processor.py:186} INFO - Started process (PID=3770) to work on /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:27:21.607+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag_imut.py for tasks to queue
+[2025-03-22T09:27:21.610+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:27:21.609+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:27:21.663+0000] {processor.py:925} INFO - DAG(s) 'contoh_dag_pertamaku' retrieved from /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:27:21.698+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:27:21.698+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-22T09:27:21.742+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:27:21.742+0000] {dag.py:4180} INFO - Setting next_dagrun for contoh_dag_pertamaku to 2025-03-21 00:00:00+00:00, run_after=2025-03-22 00:00:00+00:00
+[2025-03-22T09:27:21.775+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag_imut.py took 0.189 seconds
+[2025-03-22T09:27:52.399+0000] {processor.py:186} INFO - Started process (PID=3834) to work on /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:27:52.401+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag_imut.py for tasks to queue
+[2025-03-22T09:27:52.403+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:27:52.403+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:27:52.442+0000] {processor.py:925} INFO - DAG(s) 'contoh_dag_pertamaku' retrieved from /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:27:52.474+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:27:52.474+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-22T09:27:52.513+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:27:52.512+0000] {dag.py:4180} INFO - Setting next_dagrun for contoh_dag_pertamaku to 2025-03-21 00:00:00+00:00, run_after=2025-03-22 00:00:00+00:00
+[2025-03-22T09:27:52.543+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag_imut.py took 0.157 seconds
+[2025-03-22T09:28:23.030+0000] {processor.py:186} INFO - Started process (PID=3898) to work on /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:28:23.032+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag_imut.py for tasks to queue
+[2025-03-22T09:28:23.035+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:28:23.034+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:28:23.071+0000] {processor.py:925} INFO - DAG(s) 'contoh_dag_pertamaku' retrieved from /opt/airflow/dags/example_dag_imut.py
+[2025-03-22T09:28:23.101+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:28:23.101+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-22T09:28:23.362+0000] {logging_mixin.py:190} INFO - [2025-03-22T09:28:23.361+0000] {dag.py:4180} INFO - Setting next_dagrun for contoh_dag_pertamaku to 2025-03-21 00:00:00+00:00, run_after=2025-03-22 00:00:00+00:00
+[2025-03-22T09:28:23.391+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag_imut.py took 0.372 seconds

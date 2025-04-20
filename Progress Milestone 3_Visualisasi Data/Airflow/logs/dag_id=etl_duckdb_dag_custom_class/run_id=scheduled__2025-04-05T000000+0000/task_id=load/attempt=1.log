@@ -1,0 +1,45 @@
+[2025-04-06T11:47:26.357+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-06T11:47:26.400+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_duckdb_dag_custom_class.load scheduled__2025-04-05T00:00:00+00:00 [queued]>
+[2025-04-06T11:47:26.680+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_duckdb_dag_custom_class.load scheduled__2025-04-05T00:00:00+00:00 [queued]>
+[2025-04-06T11:47:26.681+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-04-06T11:47:26.709+0000] {taskinstance.py:2890} INFO - Executing <Task(_PythonDecoratedOperator): load> on 2025-04-05 00:00:00+00:00
+[2025-04-06T11:47:26.724+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=320) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-04-06T11:47:26.726+0000] {standard_task_runner.py:72} INFO - Started process 341 to run task
+[2025-04-06T11:47:26.726+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_duckdb_dag_custom_class', 'load', 'scheduled__2025-04-05T00:00:00+00:00', '--job-id', '34', '--raw', '--subdir', 'DAGS_FOLDER/etl_duckdb_dag.py', '--cfg-path', '/tmp/tmp6wklpxzu']
+[2025-04-06T11:47:26.727+0000] {standard_task_runner.py:105} INFO - Job 34: Subtask load
+[2025-04-06T11:47:26.806+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_duckdb_dag_custom_class.load scheduled__2025-04-05T00:00:00+00:00 [running]> on host ab75a5a3b87a
+[2025-04-06T11:47:26.962+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='julio' AIRFLOW_CTX_DAG_ID='etl_duckdb_dag_custom_class' AIRFLOW_CTX_TASK_ID='load' AIRFLOW_CTX_EXECUTION_DATE='2025-04-05T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-05T00:00:00+00:00'
+[2025-04-06T11:47:26.964+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-04-06T11:47:26.964+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-04-06T11:47:26.965+0000] {logging_mixin.py:190} INFO - Current task name:load state:running start_date:2025-04-06 11:47:26.401163+00:00
+[2025-04-06T11:47:26.965+0000] {logging_mixin.py:190} INFO - Dag name:etl_duckdb_dag_custom_class and current dag run status:running
+[2025-04-06T11:47:26.966+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-06T11:47:27.000+0000] {warnings.py:112} WARNING - /opt/***/dags/etl_duckdb_dag.py:58: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  pd.read_json(dfs["dim_customer"], orient="split"),
+
+[2025-04-06T11:47:27.027+0000] {warnings.py:112} WARNING - /opt/***/dags/etl_duckdb_dag.py:59: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  pd.read_json(dfs["dim_card"], orient="split"),
+
+[2025-04-06T11:47:27.033+0000] {warnings.py:112} WARNING - /opt/***/dags/etl_duckdb_dag.py:60: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  pd.read_json(dfs["dim_demographics"], orient="split"),
+
+[2025-04-06T11:47:27.042+0000] {warnings.py:112} WARNING - /opt/***/dags/etl_duckdb_dag.py:61: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  pd.read_json(dfs["dim_time"], orient="split"),
+
+[2025-04-06T11:47:27.047+0000] {warnings.py:112} WARNING - /opt/***/dags/etl_duckdb_dag.py:62: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  pd.read_json(dfs["fact_transactions"], orient="split")
+
+[2025-04-06T11:47:27.263+0000] {logging_mixin.py:190} INFO - ✅ Data berhasil dimuat ke data warehouse.
+[2025-04-06T11:47:27.332+0000] {logging_mixin.py:190} INFO - 🔌 Koneksi DuckDB ditutup.
+[2025-04-06T11:47:27.333+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-06T11:47:27.347+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-06T11:47:27.348+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=etl_duckdb_dag_custom_class, task_id=load, run_id=scheduled__2025-04-05T00:00:00+00:00, execution_date=20250405T000000, start_date=20250406T114726, end_date=20250406T114727
+[2025-04-06T11:47:27.383+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-04-06T11:47:27.384+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-04-06T11:47:27.384+0000] {logging_mixin.py:190} INFO - Dag name:etl_duckdb_dag_custom_class queued_at:2025-04-06 11:46:51.898322+00:00
+[2025-04-06T11:47:27.385+0000] {logging_mixin.py:190} INFO - Task hostname:ab75a5a3b87a operator:_PythonDecoratedOperator
+[2025-04-06T11:47:27.425+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-06T11:47:27.462+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-06T11:47:27.466+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

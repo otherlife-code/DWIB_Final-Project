@@ -1,0 +1,7 @@
+[2025-04-14T02:50:54.654+0000] {processor.py:186} INFO - Started process (PID=15698) to work on /opt/airflow/dags/example_dag_imut.py
+[2025-04-14T02:50:54.656+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag_imut.py for tasks to queue
+[2025-04-14T02:50:54.658+0000] {logging_mixin.py:190} INFO - [2025-04-14T02:50:54.658+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag_imut.py
+[2025-04-14T02:50:54.691+0000] {processor.py:925} INFO - DAG(s) 'contoh_dag_pertamaku' retrieved from /opt/airflow/dags/example_dag_imut.py
+[2025-04-14T02:50:54.732+0000] {logging_mixin.py:190} INFO - [2025-04-14T02:50:54.731+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-14T02:50:54.795+0000] {logging_mixin.py:190} INFO - [2025-04-14T02:50:54.794+0000] {dag.py:4180} INFO - Setting next_dagrun for contoh_dag_pertamaku to 2025-04-13 00:00:00+00:00, run_after=2025-04-14 00:00:00+00:00
+[2025-04-14T02:50:54.854+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag_imut.py took 0.210 seconds

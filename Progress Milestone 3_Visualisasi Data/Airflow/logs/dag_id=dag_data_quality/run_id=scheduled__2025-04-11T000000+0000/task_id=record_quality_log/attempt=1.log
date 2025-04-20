@@ -1,0 +1,28 @@
+[2025-04-12T01:07:09.101+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-12T01:07:09.137+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_data_quality.record_quality_log scheduled__2025-04-11T00:00:00+00:00 [queued]>
+[2025-04-12T01:07:09.155+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_data_quality.record_quality_log scheduled__2025-04-11T00:00:00+00:00 [queued]>
+[2025-04-12T01:07:09.156+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-04-12T01:07:09.179+0000] {taskinstance.py:2890} INFO - Executing <Task(_PythonDecoratedOperator): record_quality_log> on 2025-04-11 00:00:00+00:00
+[2025-04-12T01:07:09.193+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=46054) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-04-12T01:07:09.195+0000] {standard_task_runner.py:72} INFO - Started process 46058 to run task
+[2025-04-12T01:07:09.195+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_data_quality', 'record_quality_log', 'scheduled__2025-04-11T00:00:00+00:00', '--job-id', '130', '--raw', '--subdir', 'DAGS_FOLDER/dag_data_quality.py', '--cfg-path', '/tmp/tmpru53hlza']
+[2025-04-12T01:07:09.196+0000] {standard_task_runner.py:105} INFO - Job 130: Subtask record_quality_log
+[2025-04-12T01:07:09.264+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_data_quality.record_quality_log scheduled__2025-04-11T00:00:00+00:00 [running]> on host 2e277e0df613
+[2025-04-12T01:07:09.405+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='laurenziusjulioanreaja@mail.ugm.ac.id,selvianisacahyamukti@mail.ugm.ac.id,yudypratamafanggidae@mail.ugm.ac.id' AIRFLOW_CTX_DAG_OWNER='julio' AIRFLOW_CTX_DAG_ID='dag_data_quality' AIRFLOW_CTX_TASK_ID='record_quality_log' AIRFLOW_CTX_EXECUTION_DATE='2025-04-11T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-11T00:00:00+00:00'
+[2025-04-12T01:07:09.407+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-04-12T01:07:09.408+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-04-12T01:07:09.408+0000] {logging_mixin.py:190} INFO - Current task name:record_quality_log state:running start_date:2025-04-12 01:07:09.138697+00:00
+[2025-04-12T01:07:09.409+0000] {logging_mixin.py:190} INFO - Dag name:dag_data_quality and current dag run status:running
+[2025-04-12T01:07:09.409+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-12T01:07:09.490+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-12T01:07:09.502+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-12T01:07:09.503+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=dag_data_quality, task_id=record_quality_log, run_id=scheduled__2025-04-11T00:00:00+00:00, execution_date=20250411T000000, start_date=20250412T010709, end_date=20250412T010709
+[2025-04-12T01:07:09.532+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-04-12T01:07:09.533+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-04-12T01:07:09.533+0000] {logging_mixin.py:190} INFO - Dag name:dag_data_quality queued_at:2025-04-12 01:06:39.741238+00:00
+[2025-04-12T01:07:09.534+0000] {logging_mixin.py:190} INFO - Task hostname:2e277e0df613 operator:_PythonDecoratedOperator
+[2025-04-12T01:07:09.573+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-12T01:07:09.608+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-04-12T01:07:09.613+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

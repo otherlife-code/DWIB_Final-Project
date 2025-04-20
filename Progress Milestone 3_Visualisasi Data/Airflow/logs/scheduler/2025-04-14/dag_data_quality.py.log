@@ -1,0 +1,7 @@
+[2025-04-14T02:50:53.235+0000] {processor.py:186} INFO - Started process (PID=15695) to work on /opt/airflow/dags/dag_data_quality.py
+[2025-04-14T02:50:53.237+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_data_quality.py for tasks to queue
+[2025-04-14T02:50:53.248+0000] {logging_mixin.py:190} INFO - [2025-04-14T02:50:53.247+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag_data_quality.py
+[2025-04-14T02:50:53.437+0000] {processor.py:925} INFO - DAG(s) 'dag_data_quality' retrieved from /opt/airflow/dags/dag_data_quality.py
+[2025-04-14T02:50:53.970+0000] {logging_mixin.py:190} INFO - [2025-04-14T02:50:53.970+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-14T02:50:54.036+0000] {logging_mixin.py:190} INFO - [2025-04-14T02:50:54.035+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_data_quality to 2025-04-14 00:00:00+00:00, run_after=2025-04-15 00:00:00+00:00
+[2025-04-14T02:50:54.137+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_data_quality.py took 0.924 seconds

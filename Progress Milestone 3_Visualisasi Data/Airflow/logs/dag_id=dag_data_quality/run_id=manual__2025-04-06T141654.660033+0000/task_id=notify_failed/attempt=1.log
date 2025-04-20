@@ -1,0 +1,33 @@
+[2025-04-06T14:23:51.683+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-06T14:23:51.879+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_data_quality.notify_failed manual__2025-04-06T14:16:54.660033+00:00 [queued]>
+[2025-04-06T14:23:51.892+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_data_quality.notify_failed manual__2025-04-06T14:16:54.660033+00:00 [queued]>
+[2025-04-06T14:23:51.893+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-04-06T14:23:51.921+0000] {taskinstance.py:2890} INFO - Executing <Task(_PythonDecoratedOperator): notify_failed> on 2025-04-06 14:16:54.660033+00:00
+[2025-04-06T14:23:51.939+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1537) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-04-06T14:23:51.942+0000] {standard_task_runner.py:72} INFO - Started process 1541 to run task
+[2025-04-06T14:23:51.942+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_data_quality', 'notify_failed', 'manual__2025-04-06T14:16:54.660033+00:00', '--job-id', '63', '--raw', '--subdir', 'DAGS_FOLDER/dag_data_quality.py', '--cfg-path', '/tmp/tmpbt4oaews']
+[2025-04-06T14:23:51.943+0000] {standard_task_runner.py:105} INFO - Job 63: Subtask notify_failed
+[2025-04-06T14:23:52.030+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_data_quality.notify_failed manual__2025-04-06T14:16:54.660033+00:00 [running]> on host 2e277e0df613
+[2025-04-06T14:23:52.133+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='laurenziusjulioanreaja@mail.ugm.ac.id,selvianisacahyamukti@mail.ugm.ac.id,yudypratamafanggidae@mail.ugm.ac.id' AIRFLOW_CTX_DAG_OWNER='julio' AIRFLOW_CTX_DAG_ID='dag_data_quality' AIRFLOW_CTX_TASK_ID='notify_failed' AIRFLOW_CTX_EXECUTION_DATE='2025-04-06T14:16:54.660033+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-06T14:16:54.660033+00:00'
+[2025-04-06T14:23:52.135+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-04-06T14:23:52.136+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-04-06T14:23:52.137+0000] {logging_mixin.py:190} INFO - Current task name:notify_failed state:running start_date:2025-04-06 14:23:51.880414+00:00
+[2025-04-06T14:23:52.137+0000] {logging_mixin.py:190} INFO - Dag name:dag_data_quality and current dag run status:running
+[2025-04-06T14:23:52.138+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-06T14:23:52.150+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/email.py:155: RemovedInAirflow3Warning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+  send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+
+[2025-04-06T14:23:52.151+0000] {email.py:272} INFO - Email alerting: attempt 1
+[2025-04-06T14:23:53.673+0000] {email.py:283} INFO - Sent an alert email to ['laurenziusjulioanreaja@mail.ugm.ac.id', 'selvianisacahyamukti@mail.ugm.ac.id', 'yudypratamafanggidae@mail.ugm.ac.id']
+[2025-04-06T14:23:55.729+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-06T14:23:55.740+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-06T14:23:55.741+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=dag_data_quality, task_id=notify_failed, run_id=manual__2025-04-06T14:16:54.660033+00:00, execution_date=20250406T141654, start_date=20250406T142351, end_date=20250406T142355
+[2025-04-06T14:23:57.106+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-04-06T14:23:57.106+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-04-06T14:23:57.107+0000] {logging_mixin.py:190} INFO - Dag name:dag_data_quality queued_at:2025-04-06 14:16:54.837661+00:00
+[2025-04-06T14:23:57.107+0000] {logging_mixin.py:190} INFO - Task hostname:2e277e0df613 operator:_PythonDecoratedOperator
+[2025-04-06T14:23:57.150+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-06T14:23:57.166+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-06T14:23:57.169+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

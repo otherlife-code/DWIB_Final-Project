@@ -1,0 +1,48 @@
+[2025-04-17T23:01:50.993+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-17T23:01:51.021+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_duckdb_dag_custom_class.load scheduled__2025-04-15T00:00:00+00:00 [queued]>
+[2025-04-17T23:01:51.034+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_duckdb_dag_custom_class.load scheduled__2025-04-15T00:00:00+00:00 [queued]>
+[2025-04-17T23:01:51.034+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-04-17T23:01:51.054+0000] {taskinstance.py:2890} INFO - Executing <Task(_PythonDecoratedOperator): load> on 2025-04-15 00:00:00+00:00
+[2025-04-17T23:01:51.067+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=12152) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-04-17T23:01:51.069+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_duckdb_dag_custom_class', 'load', 'scheduled__2025-04-15T00:00:00+00:00', '--job-id', '189', '--raw', '--subdir', 'DAGS_FOLDER/etl_duckdb_dag.py', '--cfg-path', '/tmp/tmp33rqf29a']
+[2025-04-17T23:01:51.070+0000] {standard_task_runner.py:72} INFO - Started process 12162 to run task
+[2025-04-17T23:01:51.070+0000] {standard_task_runner.py:105} INFO - Job 189: Subtask load
+[2025-04-17T23:01:51.128+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_duckdb_dag_custom_class.load scheduled__2025-04-15T00:00:00+00:00 [running]> on host 697c9a4320f6
+[2025-04-17T23:01:51.279+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='laurenziusjulioanreaja@mail.ugm.ac.id,selvianisacahyamukti@mail.ugm.ac.id,yudypratamafanggidae@mail.ugm.ac.id' AIRFLOW_CTX_DAG_OWNER='julio' AIRFLOW_CTX_DAG_ID='etl_duckdb_dag_custom_class' AIRFLOW_CTX_TASK_ID='load' AIRFLOW_CTX_EXECUTION_DATE='2025-04-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-15T00:00:00+00:00'
+[2025-04-17T23:01:51.281+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-04-17T23:01:51.282+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-04-17T23:01:51.283+0000] {logging_mixin.py:190} INFO - Current task name:load state:running start_date:2025-04-17 23:01:51.022087+00:00
+[2025-04-17T23:01:51.284+0000] {logging_mixin.py:190} INFO - Dag name:etl_duckdb_dag_custom_class and current dag run status:running
+[2025-04-17T23:01:51.284+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-17T23:01:51.320+0000] {warnings.py:112} WARNING - /opt/***/dags/etl_duckdb_dag.py:67: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  pd.read_json(dfs["dim_customer"], orient="split"),
+
+[2025-04-17T23:01:51.339+0000] {warnings.py:112} WARNING - /opt/***/dags/etl_duckdb_dag.py:68: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  pd.read_json(dfs["dim_card"], orient="split"),
+
+[2025-04-17T23:01:51.343+0000] {warnings.py:112} WARNING - /opt/***/dags/etl_duckdb_dag.py:69: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  pd.read_json(dfs["dim_demographics"], orient="split"),
+
+[2025-04-17T23:01:51.356+0000] {warnings.py:112} WARNING - /opt/***/dags/etl_duckdb_dag.py:70: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  pd.read_json(dfs["dim_time"], orient="split"),
+
+[2025-04-17T23:01:51.361+0000] {warnings.py:112} WARNING - /opt/***/dags/etl_duckdb_dag.py:71: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  pd.read_json(dfs["fact_transactions"], orient="split")
+
+[2025-04-17T23:01:51.554+0000] {logging_mixin.py:190} INFO - ✅ Data berhasil dimuat ke data warehouse.
+[2025-04-17T23:01:51.555+0000] {warnings.py:112} WARNING - /opt/***/dags/etl_duckdb_dag.py:74: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  "num_records": len(pd.read_json(dfs["fact_transactions"], orient="split")),
+
+[2025-04-17T23:01:51.646+0000] {logging_mixin.py:190} INFO - 🔌 Koneksi DuckDB ditutup.
+[2025-04-17T23:01:51.648+0000] {python.py:240} INFO - Done. Returned value was: {'num_records': 500, 'timestamp': '2025-04-17T23:01:51.569070'}
+[2025-04-17T23:01:51.689+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-17T23:01:51.690+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=etl_duckdb_dag_custom_class, task_id=load, run_id=scheduled__2025-04-15T00:00:00+00:00, execution_date=20250415T000000, start_date=20250417T230151, end_date=20250417T230151
+[2025-04-17T23:01:51.729+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-04-17T23:01:51.730+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-04-17T23:01:51.730+0000] {logging_mixin.py:190} INFO - Dag name:etl_duckdb_dag_custom_class queued_at:2025-04-17 23:00:44.626420+00:00
+[2025-04-17T23:01:51.731+0000] {logging_mixin.py:190} INFO - Task hostname:697c9a4320f6 operator:_PythonDecoratedOperator
+[2025-04-17T23:01:51.769+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-17T23:01:51.819+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-04-17T23:01:51.827+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

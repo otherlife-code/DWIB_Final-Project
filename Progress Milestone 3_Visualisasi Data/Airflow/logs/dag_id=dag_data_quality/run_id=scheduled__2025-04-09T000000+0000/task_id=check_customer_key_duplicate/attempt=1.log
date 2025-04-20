@@ -1,0 +1,27 @@
+[2025-04-10T00:00:13.194+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-10T00:00:13.221+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_data_quality.check_customer_key_duplicate scheduled__2025-04-09T00:00:00+00:00 [queued]>
+[2025-04-10T00:00:13.234+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_data_quality.check_customer_key_duplicate scheduled__2025-04-09T00:00:00+00:00 [queued]>
+[2025-04-10T00:00:13.235+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-04-10T00:00:13.258+0000] {taskinstance.py:2890} INFO - Executing <Task(_PythonDecoratedOperator): check_customer_key_duplicate> on 2025-04-09 00:00:00+00:00
+[2025-04-10T00:00:13.281+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=32228) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-04-10T00:00:13.284+0000] {standard_task_runner.py:72} INFO - Started process 32240 to run task
+[2025-04-10T00:00:13.292+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_data_quality', 'check_customer_key_duplicate', 'scheduled__2025-04-09T00:00:00+00:00', '--job-id', '109', '--raw', '--subdir', 'DAGS_FOLDER/dag_data_quality.py', '--cfg-path', '/tmp/tmpo_fm0czu']
+[2025-04-10T00:00:13.296+0000] {standard_task_runner.py:105} INFO - Job 109: Subtask check_customer_key_duplicate
+[2025-04-10T00:00:13.565+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_data_quality.check_customer_key_duplicate scheduled__2025-04-09T00:00:00+00:00 [running]> on host 2e277e0df613
+[2025-04-10T00:00:14.511+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='laurenziusjulioanreaja@mail.ugm.ac.id,selvianisacahyamukti@mail.ugm.ac.id,yudypratamafanggidae@mail.ugm.ac.id' AIRFLOW_CTX_DAG_OWNER='julio' AIRFLOW_CTX_DAG_ID='dag_data_quality' AIRFLOW_CTX_TASK_ID='check_customer_key_duplicate' AIRFLOW_CTX_EXECUTION_DATE='2025-04-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-09T00:00:00+00:00'
+[2025-04-10T00:00:14.537+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-04-10T00:00:14.538+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-04-10T00:00:14.539+0000] {logging_mixin.py:190} INFO - Current task name:check_customer_key_duplicate state:running start_date:2025-04-10 00:00:13.222106+00:00
+[2025-04-10T00:00:14.539+0000] {logging_mixin.py:190} INFO - Dag name:dag_data_quality and current dag run status:running
+[2025-04-10T00:00:14.540+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-10T00:00:14.986+0000] {python.py:240} INFO - Done. Returned value was: ✅ customer_key OK, tidak ada duplikat
+[2025-04-10T00:00:15.023+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-10T00:00:15.024+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=dag_data_quality, task_id=check_customer_key_duplicate, run_id=scheduled__2025-04-09T00:00:00+00:00, execution_date=20250409T000000, start_date=20250410T000013, end_date=20250410T000015
+[2025-04-10T00:00:15.072+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-04-10T00:00:15.073+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-04-10T00:00:15.074+0000] {logging_mixin.py:190} INFO - Dag name:dag_data_quality queued_at:2025-04-10 00:00:00.319029+00:00
+[2025-04-10T00:00:15.074+0000] {logging_mixin.py:190} INFO - Task hostname:2e277e0df613 operator:_PythonDecoratedOperator
+[2025-04-10T00:00:15.124+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-10T00:00:15.139+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
