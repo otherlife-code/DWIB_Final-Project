@@ -64,6 +64,8 @@ Proyek ini merupakan implementasi lengkap dari proses perancangan *Data Warehous
 2. **Pie Chart** - Transaksi berdasarkan segmen pendapatan
 3. **Bar Chart** - Rata-rata utilisasi per kategori kartu
 4. **Scatter Plot** - Distribusi CLV berdasarkan status pelanggan
+5. **Sanskey Plot** - Korelasi Utilitas dan Inaktivitas Customer
+6. **Tabel** - Top 10 Pelanggan dengan Customer Lifetime Value terbaik
 
 ### Filter Interaktif:
 - Filter `Card_Category` (kategori kartu)
