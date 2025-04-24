@@ -4,6 +4,8 @@
 
 Proyek ini merupakan implementasi lengkap dari proses perancangan *Data Warehouse*, pembangunan *Data Mart* di DuckDB/SQLite, hingga visualisasi data interaktif melalui dashboard Metabase, berdasarkan dataset pelanggan kartu kredit (Bank Churners).
 
+Link Dashboard = https://bankchurnerss.metabaseapp.com/public/dashboard/b68f0e4e-84a7-4c28-992a-f4a531c85c79?card_category=&income_category=&teks=
+Link Video     = 
 ---
 
 ## 📂 1. Persiapan Data dan Data Mart (25%)
