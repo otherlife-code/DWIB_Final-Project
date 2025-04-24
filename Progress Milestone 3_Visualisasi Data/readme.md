@@ -52,7 +52,8 @@ Proyek ini merupakan implementasi lengkap dari proses perancangan *Data Warehous
 
 ### Nama Dashboard: `Customer Retention Insight`
 
-![dashboard](./data/dashboard_preview.png)
+![Dashboard Preview](https://github.com/otherlife-code/DWIB_Final-Project/raw/main/Progress%20Milestone%203_Visualisasi%20Data/Asset/Dashboard_1.png)
+![Dashboard Preview_2](https://github.com/otherlife-code/DWIB_Final-Project/blob/main/Progress%20Milestone%203_Visualisasi%20Data/Asset/Dashboard_2.png)
 
 ### Visualisasi Utama:
 1. **KPI Cards**
